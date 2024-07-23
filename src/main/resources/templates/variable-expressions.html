@@ -6,9 +6,21 @@
   <title>Insert title here</title>
 </head>
 <body>
-  <h3>プロパティを持たないStringオブジェクトを表示</h3>
+  プロパティを持たないStringオブジェクトを表示<br>
   名前：<span th:text="${name}">dummy</span><br>
-  <h3>Carオブジェクトのspeedプロパティを表示</h3>
+  Carオブジェクトのspeedプロパティを表示<br>
   車のスピード：<span th:text="${car.speed}">dummy</span><br>
+  車のボディカラー：<span th:text="${car.bodyColor}">dummy</span><br>
+
+  <div th:object="${car}">
+    車のスピード：<span th:text="*{speed}">dummy</span><br>
+    車のボディカラー：<span th:text="*{bodyColor}">dummy</span>
+  </div>
+
+  <span th:text="#{aaa}">dummy</span>
+  <span th:text="#{bbb.cccc}">dummy</span><br>
+
+  <a href="#" th:href="@{/variable-expressions?hogehoge=} + ${car.speed}">スピードパラメーター付きリンク</a>
+
 </body>
 </html>
