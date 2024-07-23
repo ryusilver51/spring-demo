@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>以下の情報で登録完了しました</h2>
+  名前：<span th:text="${session.user.name}"></span><br>
+  メールアドレス：<span th:text="${session.user.email}"></span><br>
+  性別：<span th:text="${session.user.gender}"></span><br>
+  <a href="#" th:href="@{/user}">戻る</a>
+</body>
+</html>

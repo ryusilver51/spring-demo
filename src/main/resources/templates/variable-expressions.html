@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert title here</title>
+</head>
+<body>
+  <h3>プロパティを持たないStringオブジェクトを表示</h3>
+  名前：<span th:text="${name}">dummy</span><br>
+  <h3>Carオブジェクトのspeedプロパティを表示</h3>
+  車のスピード：<span th:text="${car.speed}">dummy</span><br>
+</body>
+</html>
